@@ -5,12 +5,14 @@ I have invented. The idea came to me when I was thinking of a way to obfuscate
 the save data of a game that I am working on. The cipher takes three parameters:
 the message to be enciphered, a set of gridshift rules and a keyword.
 
-Here's an attempt at a description of how the cipher works. Start by bulding two
-6x6 alphabet squares, containing all the letters from the Latin alphabet and the
-digits 0 through 9. These are the source and target squares. A keyword can be
-provided to reorder the characters in the target square. For instance, if the
-keyword "clockwise" is provided, the target square in its initial state will
-look like this:
+Here's an attempt at a description of how to apply the cipher to a message by
+hand:
+
+Start by bulding two 6x6 alphabet squares, containing all the letters from the
+Latin alphabet and the digits 0 through 9. These are the source and target squares.
+A keyword can be provided to reorder the characters in the target square. For 
+nstance, if the keyword "clockwise" is provided, the target square in its initial
+state will look like this:
 
 ```
 C L O K W I
@@ -34,9 +36,8 @@ and shift second and sixth columns north -- everything else south. When
 defining numbered rules, it's a good idea to limit yourself to three numbers,
 since w1345 does the same thing as e26.
 
-Once equipped with the source and target square, and the gridshift rules,
-here's an attempt at an explanation of how to encode a message, starting
-from the first character and rule:
+Once equipped with the source and target square and the gridshift rules,
+follow the steps below, starting from the first character and rule:
 
 The first step is to shift the target grid by the current gridshift rule.
 Then, find the current character from the plaintext in the source square.
