@@ -5,6 +5,20 @@ I have invented. The idea came to me when I was thinking of a way to obfuscate
 the save data of a game that I am working on. The cipher takes three parameters:
 the message to be enciphered, a set of gridshift rules and a keyword.
 
+The user interface of the program is a bit rough around the edges. At the
+moment, copying and pasting only works by using the corresponding buttons.
+Selecting text is not possible, nor is changing the cursor position to
+anywhere other than after the last character. Swap is a bit of a useless
+button that I added to quickly check that deciphering the ciphertext would
+actually result in the original plaintext -- it harms nobody to be there,
+but I'll probably remove it later.
+
+The font used is a font that I have created for the remake of my game
+[Armed with Springs](https://github.com/quotepilgrim/armed-w-springs)
+that I am currently working on.
+
+## How does it work?
+
 Here's an attempt at a description of how to apply the cipher to a message by
 hand:
 
@@ -54,42 +68,3 @@ looking up characters in the source square and finding the corresponding
 character in the target square, you look up in the target square and find
 in the source square. (The gridshift rules are still applied to the target
 square).
-
----
-
-The user interface of the program is a bit rough around the edges. At the
-moment, copying and pasting only works by using the corresponding buttons.
-Selecting text is not possible, nor is changing the cursor position to
-anywhere other than after the last character. Swap is a bit of a useless
-button that I added to quickly check that deciphering the ciphertext would
-actually result in the original plaintext -- it harms nobody to be there,
-but I'll probably remove it later.
-
-The font used is a font that I have created for the remake of my game
-[Armed with Springs](https://github.com/quotepilgrim/armed-w-springs)
-that I am currently working on.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
