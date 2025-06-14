@@ -25,7 +25,7 @@ hand:
 Start by bulding two 6x6 alphabet squares, containing all the letters from the
 Latin alphabet and the digits 0 through 9. These are the source and target squares.
 A keyword can be provided to reorder the characters in the target square. For 
-nstance, if the keyword "clockwise" is provided, the target square in its initial
+instance, if the keyword "clockwise" is provided, the target square in its initial
 state will look like this:
 
 ```
