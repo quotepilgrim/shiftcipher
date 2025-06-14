@@ -39,7 +39,7 @@ Y Z 0 1 2 3
 
 The gridshift rules consist of the letters "n", "e", "s", or "w", optionally
 followed by any of the numbers 1 through 6, where each letter is one rule
-indicating a direction in which to shift the target grid. The numbers
+indicating a direction in which to shift the target square. The numbers
 following a letter, if any, indicate that only the numbered columns or rows
 (depending on whether the shift is horizontal or vertical)
 should be shifted in that direction, while the remaining columns/rows are
@@ -53,7 +53,7 @@ since w1345 does the same thing as e26.
 Once equipped with the source and target square and the gridshift rules,
 follow the steps below, starting from the first character and rule:
 
-The first step is to shift the target grid by the current gridshift rule.
+The first step is to shift the target square by the current gridshift rule.
 Then, find the current character from the plaintext in the source square.
 If the character does not exist in the source square, write it to the
 ciphertext and move on to the next character without doing anything else.
