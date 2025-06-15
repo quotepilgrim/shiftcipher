@@ -61,7 +61,7 @@ character in the source square, take note of its coordinates, then find the
 character in the target square with the same coordinates and write that to
 the ciphertext. Then move on to the next rule and plaintext character and
 repeat the process. If the rule you just applied was the last one, go back
-to the first one. Keep doing this until you reach the end of the plaintext.
+to the first one. Keep repeating until you reach the end of the plaintext.
 
 Decoding the ciphertext is done by the same process, except instead of
 looking up characters in the source square and finding the corresponding
