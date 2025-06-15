@@ -53,15 +53,15 @@ since w1345 does the same thing as e26.
 Once equipped with the source and target square and the gridshift rules,
 follow the steps below, starting from the first character and rule:
 
-The first step is to shift the target square by the current gridshift rule.
-Then, find the current character from the plaintext in the source square.
-If the character does not exist in the source square, write it to the
-ciphertext and move on to the next character without doing anything else.
-Once you find the current character in the source square, take note of its
-coordinates, then find the character in the target square with the same
-coordinates and write that to the ciphertext. Then move on to the next
-rule and plaintext character and repeat the process. If at the last rule,
-go back to the first one.
+First, shift the target square by the current gridshift rule. Then, find the
+current character from the plaintext in the source square. If the character
+does not exist in the source square, write it to the ciphertext and move on
+to the next character without doing anything else. Once you find the current
+character in the source square, take note of its coordinates, then find the
+character in the target square with the same coordinates and write that to
+the ciphertext. Then move on to the next rule and plaintext character and
+repeat the process. If the rule you just applied was the last one, go back
+to the fist one. Keep doing this until you reach the end of the plaintext.
 
 Decoding the ciphertext is done by the same process, except instead of
 looking up characters in the source square and finding the corresponding
