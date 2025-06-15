@@ -44,9 +44,9 @@ following a letter, if any, indicate that only the numbered columns or rows
 (depending on whether the shift is horizontal or vertical)
 should be shifted in that direction, while the remaining columns/rows are
 shifted in the opposite direction. For instance, the string "nesw" defines
-four rules: shift north, shift east, shift south, and shift west, while w13n26
-defines two rules: shift first and third rows west -- everything else east,
-and shift second and sixth columns north -- everything else south. When
+four rules: 1. shift north, 2. shift east, 3. shift south, 4. shift west; while
+w13n26 defines two rules: 1. shift first and third rows west -- everything else
+east, 2. shift second and sixth columns north -- everything else south. When
 defining numbered rules, it's a good idea to limit yourself to three numbers,
 since w1345 does the same thing as e26.
 
