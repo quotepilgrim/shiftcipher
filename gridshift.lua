@@ -3,10 +3,10 @@ local t = {}
 local alphabet = "abcdefghijklmnopqrstuvwxyz0123456789"
 local inverse_dirs = { n = "s", e = "w", s = "n", w = "e" }
 
-local function make_square(k)
+local function make_square(key)
 	local square = {}
-	k = k or ""
-	local key = (k .. alphabet):lower()
+	key = key or ""
+	key = (key .. alphabet):lower()
 	local uniques = ""
 	local seen = {}
 	for i = 1, #key do
@@ -28,27 +28,8 @@ end
 
 local function parse_rules(ruleset)
 	local rules = {}
-	local function is_dir(c)
-		return c == "n" or c == "e" or c == "s" or c == "w"
-	end
-	local function is_digit(c)
-		c = tonumber(c) or 0
-		return c >= 1 and c <= 6
-	end
-	for i = 1, #ruleset do
-		local c = ruleset:sub(i, i):lower()
-		local nc = ruleset:sub(i + 1, i + 1)
-		if is_dir(c) and not is_digit(nc) then
-			table.insert(rules, c)
-		elseif is_dir(c) and is_digit(nc) then
-			i = i + 1
-			while is_digit(nc) do
-				c = c .. nc
-				i = i + 1
-				nc = ruleset:sub(i, i)
-			end
-			table.insert(rules, c)
-		end
+	for v in ruleset:gmatch("([nesw][1-6]*)") do
+		table.insert(rules, v)
 	end
 	return rules
 end
@@ -91,7 +72,7 @@ local function apply_rule(rule, square)
 		indices_found[tonumber(indices:sub(i, i))] = true
 	end
 	for i = 1, 6 do
-		if indices_found[i] or indices == "" then
+		if indices == "" or indices_found[i] then
 			shift(square, dir, i)
 		else
 			shift(square, inverse_dirs[dir], i)
